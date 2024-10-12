@@ -1,0 +1,25 @@
+@import './scale.css';
+:root {
+  --radius-xs: calc(0.125rem * var(--scale));
+  --radius-sm: calc(0.25rem * var(--scale));
+  --radius-md: calc(0.5rem * var(--scale));
+  --radius-lg: calc(1rem * var(--scale));
+  --radius-xl: calc(2rem * var(--scale));
+  --radius-s2: calc(0.125rem * var(--scale));
+  --radius-s4: calc(0.25rem * var(--scale));
+  --radius-s6: calc(0.375rem * var(--scale));
+  --radius-s8: calc(0.5rem * var(--scale));
+  --radius-s10: calc(0.625rem * var(--scale)); /* 10/16 = 0.625 */
+  --radius-s12: calc(0.75rem * var(--scale)); /* 12/16 = 0.75 */
+  --radius-s16: calc(1rem * var(--scale)); /* 16/16 = 1 */
+  --radius-s20: calc(1.25rem * var(--scale)); /* 20/16 = 1.25 */
+  --radius-s24: calc(1.5rem * var(--scale)); /* 24/16 = 1.5 */
+  --radius-s32: calc(2rem * var(--scale)); /* 32/16 = 2 */
+  --radius-s40: calc(2.5rem * var(--scale)); /* 40/16 = 2.5 */
+  --radius-s48: calc(3rem * var(--scale)); /* 48/16 = 3 */
+  --radius-s56: calc(3.5rem * var(--scale)); /* 56/16 = 3.5 */
+  --radius-s64: calc(4rem * var(--scale)); /* 64/16 = 4 */
+  --radius-s72: calc(4.5rem * var(--scale)); /* 72/16 = 4.5 */
+  --radius-s80: calc(5rem * var(--scale)); /* 80/16 = 5 */
+  --radius-s96: calc(6rem * var(--scale));
+}

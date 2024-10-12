@@ -1,0 +1,17 @@
+@import './scale.css';
+:root {
+  --shadow-xs: 0 calc(0.0625rem * var(--scale)) calc(0.1875rem * var(--scale)) rgba(0, 0, 0, 0.05),
+    0 calc(0.0625rem * var(--scale)) calc(0.125rem * var(--scale)) rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 calc(0.0625rem * var(--scale)) calc(0.1875rem * var(--scale)) rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 0 calc(0.625rem * var(--scale)) calc(0.9375rem * var(--scale)) calc(-0.3125rem * var(--scale)),
+    rgba(0, 0, 0, 0.04) 0 calc(0.4375rem * var(--scale)) calc(0.4375rem * var(--scale)) calc(-0.3125rem * var(--scale));
+  --shadow-md: 0 calc(0.0625rem * var(--scale)) calc(0.1875rem * var(--scale)) rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 0 calc(1.25rem * var(--scale)) calc(1.5625rem * var(--scale)) calc(-0.3125rem * var(--scale)),
+    rgba(0, 0, 0, 0.04) 0 calc(0.625rem * var(--scale)) calc(0.625rem * var(--scale)) calc(-0.3125rem * var(--scale));
+  --shadow-lg: 0 calc(0.0625rem * var(--scale)) calc(0.1875rem * var(--scale)) rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 0 calc(1.75rem * var(--scale)) calc(1.4375rem * var(--scale)) calc(-0.4375rem * var(--scale)),
+    rgba(0, 0, 0, 0.04) 0 calc(0.75rem * var(--scale)) calc(0.75rem * var(--scale)) calc(-0.4375rem * var(--scale));
+  --shadow-xl: 0 calc(0.0625rem * var(--scale)) calc(0.1875rem * var(--scale)) rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 0 calc(2.25rem * var(--scale)) calc(1.75rem * var(--scale)) calc(-0.4375rem * var(--scale)),
+    rgba(0, 0, 0, 0.04) 0 calc(1.0625rem * var(--scale)) calc(1.0625rem * var(--scale)) calc(-0.4375rem * var(--scale));
+}

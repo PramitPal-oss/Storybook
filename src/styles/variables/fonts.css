@@ -1,0 +1,27 @@
+@import './scale.css';
+
+:root {
+  --font-size-xs: calc(0.75rem * var(--scale));
+  --font-size-sm: calc(0.875rem * var(--scale));
+  --font-size-md: calc(1rem * var(--scale));
+  --font-size-lg: calc(1.125rem * var(--scale));
+  --font-size-xl: calc(1.25rem * var(--scale));
+  --font-size-T1: calc(4rem * var(--scale)); /* 64/16 = 4 */
+  --font-size-T2: calc(2.25rem * var(--scale)); /* 36/16 = 2.25 */
+
+  /* Heading text */
+  --font-size-H1: calc(2rem * var(--scale)); /* 32/16 = 2 */
+  --font-size-H2: calc(1.5rem * var(--scale)); /* 24/16 = 1.5 */
+
+  /* Body text */
+  --font-size-B1: calc(1.5rem * var(--scale)); /* 24/16 = 1.5 */
+  --font-size-B2: calc(1.5rem * var(--scale)); /* 24/16 = 1.5 */
+  --font-size-B3: calc(1.125rem * var(--scale)); /* 18/16 = 1.125 */
+  --font-size-B4: calc(1.125rem * var(--scale)); /* 18/16 = 1.125 */
+
+  /* Label text */
+  --font-size-L1: calc(0.875rem * var(--scale)); /* 14/16 = 0.875 */
+  --font-size-L2: calc(0.875rem * var(--scale)); /* 14/16 = 0.875 */
+  --font-size-L3: calc(0.75rem * var(--scale)); /* 12/16 = 0.75 */
+  --font-size-L4: calc(1rem * var(--scale)); /* 16/16 = 1 */
+}

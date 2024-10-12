@@ -1,0 +1,8 @@
+@import './scale.css';
+:root {
+  --line-height-xs: 1.4;
+  --line-height-sm: 1.45;
+  --line-height-md: 1.55;
+  --line-height-lg: 1.6;
+  --line-height-xl: 1.65;
+}

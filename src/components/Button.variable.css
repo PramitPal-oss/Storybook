@@ -1,0 +1,17 @@
+:root {
+  --button-height-xs: calc(2.25rem * var(--scale));
+  --button-height-sm: calc(2.25rem * var(--scale));
+  --button-height-md: calc(2.625rem * var(--scale));
+  --button-height-lg: calc(3.125rem * var(--scale));
+  --button-height-xl: calc(3.75rem * var(--scale));
+  --button-loader-size-xs: calc(var(--button-height-xs) / 1.8);
+  --button-loader-size-sm: calc(var(--button-height-sm) / 1.8);
+  --button-loader-size-md: calc(var(--button-height-md) / 1.8);
+  --button-loader-size-lg: calc(var(--button-height-lg) / 1.8);
+  --button-loader-size-xl: calc(var(--button-height-xl) / 1.8);
+  --button-loader-border-width-xs: calc(var(--button-loader-size-xs) / 8);
+  --button-loader-border-width-sm: calc(var(--button-loader-size-sm) / 8);
+  --button-loader-border-width-md: calc(var(--button-loader-size-md) / 8);
+  --button-loader-border-width-lg: calc(var(--button-loader-size-lg) / 8);
+  --button-loader-border-width-xl: calc(var(--button-loader-size-xl) / 8);
+}
