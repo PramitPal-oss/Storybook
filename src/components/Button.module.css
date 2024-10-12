@@ -152,11 +152,6 @@ button:not(:active) {
   cursor: not-allowed;
 }
 
-button:disabled:hover {
-  background-color: var(--color-gray-1);
-  filter: brightness(100%);
-}
-
 .button--loader--xs {
   border-width: 2px;
   width: 16.6562px;

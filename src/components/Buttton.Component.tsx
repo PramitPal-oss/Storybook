@@ -93,7 +93,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
   const renderIcon = (icon: ReactNode) => {
     if (isValidElement(icon)) {
-      return cloneElement(icon, {
+      return cloneElement(icon as React.ReactElement<{ size?: number }>, {
         size: iconSizeMap[size],
       });
     }
