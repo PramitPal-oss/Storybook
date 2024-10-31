@@ -56,12 +56,12 @@ const meta: Meta<StoryProps> = {
     },
     leftsection: {
       control: 'select',
-      options: ['IconAB2', 'IconAccessible', 'IconApple'],
+      options: ['none', 'IconAB2', 'IconAccessible', 'IconApple'],
       description: 'Example Icon Uses from Tablar Icons Just to demonstrate',
     },
     rightsection: {
       control: 'select',
-      options: ['IconAssembly', 'IconBrandDribbble', 'IconBrightnessAutoFilled'],
+      options: ['none', 'IconAssembly', 'IconBrandDribbble', 'IconBrightnessAutoFilled'],
       description: 'Example Icon Uses from Tablar Icons Just to demonstrate',
     },
   },
