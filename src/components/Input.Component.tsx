@@ -4,7 +4,7 @@ import styles from './Input.module.css';
 type InputSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 type InputVariant = 'default' | 'filled' | 'unstyled';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   size?: InputSize;
   radius?: InputSize;
   variant?: InputVariant;
@@ -31,17 +31,7 @@ interface InputWrapperProps {
   style?: React.CSSProperties;
 }
 
-const InputWrapper: React.FC<InputWrapperProps> = ({
-  label,
-  description,
-  error,
-  required,
-  withAsterisk,
-  children,
-  id,
-  className,
-  style,
-}) => {
+const InputWrapper: React.FC<InputWrapperProps> = ({ label, description, error, required, withAsterisk, children, id, className, style }) => {
   const showAsterisk = withAsterisk !== false && (required || withAsterisk === true);
 
   return (
@@ -50,7 +40,7 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
         <label htmlFor={id} className={styles.label}>
           {label}
           {showAsterisk && (
-            <span className={styles.required} aria-hidden="true">
+            <span className={styles.required} aria-hidden='true'>
               *
             </span>
           )}
@@ -59,7 +49,7 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
       {description && <span className={styles.description}>{description}</span>}
       {children}
       {error && typeof error !== 'boolean' && (
-        <span className={styles['error-message']} role="alert">
+        <span className={styles['error-message']} role='alert'>
           {error}
         </span>
       )}
@@ -89,19 +79,9 @@ const Input: React.FC<InputProps> & { Wrapper: typeof InputWrapper } = (props) =
 
   const loaderClassName = `${styles.loader} ${styles[`loader--${size}`]} ${styles[`loader--color--${variant}`]}`;
 
-  const effectiveLeftSection =
-    loading && loadingPosition === 'left' ? (
-      <span className={loaderClassName} />
-    ) : (
-      leftSection
-    );
+  const effectiveLeftSection = loading && loadingPosition === 'left' ? <span className={loaderClassName} /> : leftSection;
 
-  const effectiveRightSection =
-    loading && loadingPosition === 'right' ? (
-      <span className={loaderClassName} />
-    ) : (
-      rightSection
-    );
+  const effectiveRightSection = loading && loadingPosition === 'right' ? <span className={loaderClassName} /> : rightSection;
 
   const hasLeftSection = Boolean(effectiveLeftSection);
   const hasRightSection = Boolean(effectiveRightSection);
@@ -109,12 +89,8 @@ const Input: React.FC<InputProps> & { Wrapper: typeof InputWrapper } = (props) =
 
   const styleObject = {
     '--input-radius': `var(--radius-${radius})`,
-    '--input-left-section-width': leftSectionWidth
-      ? `${leftSectionWidth}px`
-      : `var(--input-section-width-${size})`,
-    '--input-right-section-width': rightSectionWidth
-      ? `${rightSectionWidth}px`
-      : `var(--input-section-width-${size})`,
+    '--input-left-section-width': leftSectionWidth ? `${leftSectionWidth}px` : `var(--input-section-width-${size})`,
+    '--input-right-section-width': rightSectionWidth ? `${rightSectionWidth}px` : `var(--input-section-width-${size})`,
     '--input-padding-left': hasLeftSection ? '0' : `var(--input-padding-${size})`,
     '--input-padding-right': hasRightSection ? '0' : `var(--input-padding-${size})`,
   } as React.CSSProperties;
@@ -130,32 +106,18 @@ const Input: React.FC<InputProps> & { Wrapper: typeof InputWrapper } = (props) =
     .filter(Boolean)
     .join(' ');
 
-  const inputClassName = [
-    styles['input--common'],
-    variant === 'unstyled' ? styles['input--unstyled'] : '',
-  ]
-    .filter(Boolean)
-    .join(' ');
+  const inputClassName = [styles['input--common'], variant === 'unstyled' ? styles['input--unstyled'] : ''].filter(Boolean).join(' ');
 
   return (
     <div className={wrapperClassName} style={{ ...styleObject, ...style }}>
       {hasLeftSection && (
-        <div
-          className={`${styles.section} ${styles['section--left']} ${styles[`section--pointer-${leftSectionPointerEvents}`]}`}
-        >
+        <div className={`${styles.section} ${styles['section--left']} ${styles[`section--pointer-${leftSectionPointerEvents}`]}`}>
           {effectiveLeftSection}
         </div>
       )}
-      <input
-        className={inputClassName}
-        disabled={loading || disabled}
-        aria-invalid={hasError ? true : undefined}
-        {...rest}
-      />
+      <input className={inputClassName} disabled={loading || disabled} aria-invalid={hasError ? true : undefined} {...rest} />
       {hasRightSection && (
-        <div
-          className={`${styles.section} ${styles['section--right']} ${styles[`section--pointer-${rightSectionPointerEvents}`]}`}
-        >
+        <div className={`${styles.section} ${styles['section--right']} ${styles[`section--pointer-${rightSectionPointerEvents}`]}`}>
           {effectiveRightSection}
         </div>
       )}
