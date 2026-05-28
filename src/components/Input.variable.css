@@ -1,0 +1,27 @@
+:root {
+  --input-height-xs: calc(1.875rem * var(--scale));
+  --input-height-sm: calc(2.25rem * var(--scale));
+  --input-height-md: calc(2.625rem * var(--scale));
+  --input-height-lg: calc(3.125rem * var(--scale));
+  --input-height-xl: calc(3.75rem * var(--scale));
+  --input-padding-xs: calc(0.625rem * var(--scale));
+  --input-padding-sm: calc(0.75rem * var(--scale));
+  --input-padding-md: calc(1rem * var(--scale));
+  --input-padding-lg: calc(1rem * var(--scale));
+  --input-padding-xl: calc(1.25rem * var(--scale));
+  --input-loader-size-xs: calc(var(--input-height-xs) / 1.8);
+  --input-loader-size-sm: calc(var(--input-height-sm) / 1.8);
+  --input-loader-size-md: calc(var(--input-height-md) / 1.8);
+  --input-loader-size-lg: calc(var(--input-height-lg) / 1.8);
+  --input-loader-size-xl: calc(var(--input-height-xl) / 1.8);
+  --input-loader-border-width-xs: calc(var(--input-loader-size-xs) / 8);
+  --input-loader-border-width-sm: calc(var(--input-loader-size-sm) / 8);
+  --input-loader-border-width-md: calc(var(--input-loader-size-md) / 8);
+  --input-loader-border-width-lg: calc(var(--input-loader-size-lg) / 8);
+  --input-loader-border-width-xl: calc(var(--input-loader-size-xl) / 8);
+  --input-section-width-xs: calc(1.875rem * var(--scale));
+  --input-section-width-sm: calc(2.25rem * var(--scale));
+  --input-section-width-md: calc(2.625rem * var(--scale));
+  --input-section-width-lg: calc(3.125rem * var(--scale));
+  --input-section-width-xl: calc(3.75rem * var(--scale));
+}

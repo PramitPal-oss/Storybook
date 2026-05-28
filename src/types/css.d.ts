@@ -4,6 +4,11 @@ declare module '*.module.css' {
   export default classes;
 }
 
+declare module '*.css' {
+  const content: string;
+  export default content;
+}
+
 // src/types/cssVariables.d.ts
 declare module '@/styles/variables' {
   export interface CSSVariables {
